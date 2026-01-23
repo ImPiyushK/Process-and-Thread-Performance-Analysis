@@ -44,11 +44,7 @@ MT25076_PA01/
 │   └── MT25076_Part_D_CSV.csv      # Part D measurement results
 │
 └── Generated Plots (MT25076_*.png)
-    ├── MT25076_dashboard_fork.png  # Part C combined metrics dashboard
-    ├── MT25076_heatmap.png         # Normalized metrics heatmap
-    ├── MT25076_radar.png           # Worker type profile radar charts
     ├── MT25076_comparison.png      # Detailed bar comparison
-    ├── MT25076_dashboard_thread.png# Part D scaling analysis dashboard
     └── MT25076_scaling.png         # CPU scaling line charts
 ```
 
@@ -185,7 +181,27 @@ make plots
 python3 MT25076_Part_C_plot.py
 ```
 
+### Generated Visualizations
 
+| Plot File | Description |
+|-----------|-------------|
+| `MT25076_comparison.png` | Part C: Detailed grouped bar comparison |
+| `MT25076_scaling.png` | Part D: Detailed CPU scaling line charts |
+
+## Manual Execution
+
+```bash
+# Run individual programs with specific workers
+./programA cpu              # Run Program A with CPU worker
+./programB mem              # Run Program B with Memory worker
+./programA io               # Run Program A with I/O worker
+
+# Pin to specific CPU for consistent measurements
+taskset -c 0 ./programA cpu
+
+# Measure with time command
+time ./programB io
+```
 
 ## Expected Results
 
