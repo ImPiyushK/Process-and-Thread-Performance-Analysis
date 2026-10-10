@@ -1,6 +1,4 @@
-# MT25076_PA01: Process and Thread Performance Analysis
-
-## Roll Number: MT25076
+# Process and Thread Performance Analysis
 
 ## Overview
 
@@ -249,9 +247,3 @@ chmod +x MT25076_Part_C_shell.sh MT25076_Part_D_shell.sh
 ```bash
 pip3 install pandas matplotlib numpy
 ```
-
-## Author
-
-- **Roll Number**: MT25076
-- **Assignment**: PA01 - Process and Thread Performance Analysis
-- **Course**: Graduate Studies in Computer Science
